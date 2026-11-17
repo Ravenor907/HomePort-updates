@@ -1,8 +1,7 @@
 # Puts the newest release's update site (update-site.tar.gz) on GitHub Pages.
+# Started by Homeport's tools/publish-updates.sh after it makes a release.
 name: Publish the update site
 on:
-  release:
-    types: [published]
   workflow_dispatch:
 permissions:
   contents: read
