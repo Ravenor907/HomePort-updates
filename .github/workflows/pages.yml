@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read   # the deploy step looks up the uploaded site among this run's files
   pages: write
   id-token: write
 concurrency:
