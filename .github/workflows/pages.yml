@@ -29,6 +29,9 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
+      # GitHub sometimes doesn't list the uploaded site yet when the next step asks for it.
+      - name: Give GitHub a moment to list the uploaded site
+        run: sleep 20
       - id: deploy
         uses: actions/deploy-pages@v5
 
